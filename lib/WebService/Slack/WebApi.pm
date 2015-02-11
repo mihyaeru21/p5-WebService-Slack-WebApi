@@ -119,11 +119,11 @@ These parameters are not primitive:
 
 =head1 AUTHOR
 
-mihyaeru21 E<lt>mihyaeru21@gmail.comE<gt>
+Mihyaeru/mihyaeru21 E<lt>mihyaeru21@gmail.comE<gt>
 
 =head1 LICENSE
 
-Copyright (C) mihyaeru21
+Copyright (C) Mihyaeru/mihyaeru21
 
 Released under the MIT license.
 

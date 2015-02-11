@@ -15,6 +15,36 @@ DISTRIBUTIONS
       Variable::Magic 0.48
       strict 0
       warnings 0
+  CGI-4.13
+    pathname: L/LE/LEEJO/CGI-4.13.tar.gz
+    provides:
+      CGI 4.13
+      CGI::Carp 4.13
+      CGI::Cookie 4.13
+      CGI::File::Temp 4.13
+      CGI::Pretty 4.13
+      CGI::Push 4.13
+      CGI::Util 4.13
+      Fh 4.13
+      MultipartBuffer 4.13
+    requirements:
+      Carp 0
+      Config 0
+      Encode 0
+      Exporter 0
+      ExtUtils::MakeMaker 0
+      File::Spec 0.82
+      File::Temp 0
+      HTML::Entities 3.69
+      base 0
+      constant 0
+      if 0
+      overload 0
+      parent 0.225
+      perl 5.008001
+      strict 0
+      utf8 0
+      warnings 0
   CPAN-Meta-2.143240
     pathname: D/DA/DAGOLDEN/CPAN-Meta-2.143240.tar.gz
     provides:
@@ -205,6 +235,27 @@ DISTRIBUTIONS
       Socket 0
       Time::HiRes 0
       perl 5.008001
+  HTML-Parser-3.71
+    pathname: G/GA/GAAS/HTML-Parser-3.71.tar.gz
+    provides:
+      HTML::Entities 3.69
+      HTML::Filter 3.57
+      HTML::HeadParser 3.71
+      HTML::LinkExtor 3.69
+      HTML::Parser 3.71
+      HTML::PullParser 3.57
+      HTML::TokeParser 3.69
+    requirements:
+      ExtUtils::MakeMaker 0
+      HTML::Tagset 3
+      XSLoader 0
+      perl 5.008
+  HTML-Tagset-3.20
+    pathname: P/PE/PETDANCE/HTML-Tagset-3.20.tar.gz
+    provides:
+      HTML::Tagset 3.20
+    requirements:
+      ExtUtils::MakeMaker 0
   HTTP-Date-6.02
     pathname: G/GA/GAAS/HTTP-Date-6.02.tar.gz
     provides:
@@ -395,6 +446,18 @@ DISTRIBUTIONS
       Try::Tiny 0
       strict 0
       warnings 0
+  Module-Pluggable-5.1
+    pathname: S/SI/SIMONW/Module-Pluggable-5.1.tar.gz
+    provides:
+      Devel::InnerPackage 0.4
+      Module::Pluggable 5.1
+      Module::Pluggable::Object 5.1
+    requirements:
+      File::Basename 0
+      File::Spec 3.00
+      Module::Build 0.38
+      Test::More 0.62
+      if 0
   Module-Runtime-0.014
     pathname: Z/ZE/ZEFRAM/Module-Runtime-0.014.tar.gz
     provides:
@@ -521,6 +584,40 @@ DISTRIBUTIONS
       Scalar::Util 0
       strict 0
       warnings 0
+  Sub-Uplevel-0.25
+    pathname: D/DA/DAGOLDEN/Sub-Uplevel-0.25.tar.gz
+    provides:
+      Sub::Uplevel 0.25
+    requirements:
+      Carp 0
+      ExtUtils::MakeMaker 6.17
+      constant 0
+      perl 5.006
+      strict 0
+      warnings 0
+  Test-AllModules-0.13
+    pathname: B/BA/BAYASHI/Test-AllModules-0.13.tar.gz
+    provides:
+      Test::AllModules 0.13
+    requirements:
+      File::Spec 0
+      FindBin 0
+      Module::Build 0.38
+      Module::Pluggable::Object 0
+      Test::More 0.88
+      Test::SharedFork 0
+      perl v5.8.1
+  Test-Exception-0.36
+    pathname: E/EX/EXODIST/Test-Exception-0.36.tar.gz
+    provides:
+      Test::Exception 0.36
+    requirements:
+      Sub::Uplevel 0.18
+      Test::Builder 0.7
+      Test::Builder::Tester 1.07
+      Test::Harness 2.03
+      Test::More 0.7
+      Test::Simple 0.7
   Test-Fatal-0.014
     pathname: R/RJ/RJBS/Test-Fatal-0.014.tar.gz
     provides:
@@ -533,6 +630,43 @@ DISTRIBUTIONS
       Try::Tiny 0.07
       strict 0
       warnings 0
+  Test-Mock-Furl-0.05
+    pathname: B/BA/BAYASHI/Test-Mock-Furl-0.05.tar.gz
+    provides:
+      Test::Mock::Furl 0.05
+      Test::Mock::Furl::Furl undef
+      Test::Mock::Furl::HTTP undef
+      Test::Mock::Furl::Request undef
+      Test::Mock::Furl::Response undef
+    requirements:
+      Exporter 0
+      Furl 0
+      Module::Build 0.38
+      Test::AllModules 0.11
+      Test::MockObject 0
+      Test::More 0.88
+      parent 0
+      perl 5.008001
+  Test-MockObject-1.20140408
+    pathname: C/CH/CHROMATIC/Test-MockObject-1.20140408.tar.gz
+    provides:
+      Test::MockObject 1.20140408
+      Test::MockObject::Extends 1.20140408
+    requirements:
+      CGI 0
+      Carp 0
+      Devel::Peek 0
+      ExtUtils::MakeMaker 6.30
+      Scalar::Util 0
+      Test::Builder 0
+      Test::Exception 0.31
+      Test::More 0.98
+      Test::Warn 0.23
+      UNIVERSAL::can 1.20110617
+      UNIVERSAL::isa 1.20110614
+      constant 0
+      strict 0
+      warnings 0
   Test-Requires-0.08
     pathname: T/TO/TOKUHIROM/Test-Requires-0.08.tar.gz
     provides:
@@ -542,6 +676,34 @@ DISTRIBUTIONS
       Test::Builder::Module 0
       Test::More 0.61
       perl 5.008_001
+  Test-SharedFork-0.29
+    pathname: E/EX/EXODIST/Test-SharedFork-0.29.tar.gz
+    provides:
+      Test::SharedFork 0.29
+      Test::SharedFork::Array undef
+      Test::SharedFork::Scalar undef
+      Test::SharedFork::Store undef
+    requirements:
+      ExtUtils::MakeMaker 6.64
+      File::Temp 0
+      Test::Builder 0.32
+      Test::Builder::Module 0
+      Test::More 0.88
+      perl 5.008_001
+  Test-Warn-0.30
+    pathname: C/CH/CHORNY/Test-Warn-0.30.tar.gz
+    provides:
+      Test::Warn 0.30
+      Test::Warn::Categorization 0.30
+    requirements:
+      Carp 1.22
+      ExtUtils::MakeMaker 0
+      File::Spec 0
+      Sub::Uplevel 0.12
+      Test::Builder 0.13
+      Test::Builder::Tester 1.02
+      Test::More 0
+      perl 5.006
   Try-Tiny-0.22
     pathname: D/DO/DOY/Try-Tiny-0.22.tar.gz
     provides:
@@ -563,6 +725,30 @@ DISTRIBUTIONS
     requirements:
       ExtUtils::MakeMaker 0
       common::sense 0
+  UNIVERSAL-can-1.20140328
+    pathname: C/CH/CHROMATIC/UNIVERSAL-can-1.20140328.tar.gz
+    provides:
+      UNIVERSAL::can 1.20140328
+    requirements:
+      ExtUtils::MakeMaker 6.30
+      Scalar::Util 0
+      strict 0
+      vars 0
+      warnings 0
+      warnings::register 0
+  UNIVERSAL-isa-1.20140927
+    pathname: E/ET/ETHER/UNIVERSAL-isa-1.20140927.tar.gz
+    provides:
+      UNIVERSAL::isa 1.20140927
+    requirements:
+      ExtUtils::MakeMaker 0
+      Module::Build::Tiny 0.038
+      Scalar::Util 0
+      UNIVERSAL 0
+      perl v5.6.2
+      strict 0
+      warnings 0
+      warnings::register 0
   URI-1.65
     pathname: E/ET/ETHER/URI-1.65.tar.gz
     provides:

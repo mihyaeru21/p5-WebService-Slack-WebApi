@@ -7,7 +7,7 @@ perl:
 before_install:
   - cpanm Carton
 install:
-  - carton install --deployment
+  - carton install
 script:
   - HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^local/|^t/" carton exec prove -lrv t
 

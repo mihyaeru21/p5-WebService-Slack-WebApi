@@ -155,6 +155,79 @@ DISTRIBUTIONS
       Test::Requires 0
       parent 0
       perl 5.008001
+  Devel-Cover-1.17
+    pathname: P/PJ/PJCJ/Devel-Cover-1.17.tar.gz
+    provides:
+      Devel::Cover 1.17
+      Devel::Cover::Annotation::Git 1.17
+      Devel::Cover::Annotation::Random 1.17
+      Devel::Cover::Annotation::Svk 1.17
+      Devel::Cover::Branch 1.17
+      Devel::Cover::Collection 1.17
+      Devel::Cover::Collection::Template::Provider 1.17
+      Devel::Cover::Condition 1.17
+      Devel::Cover::Condition_and_2 1.17
+      Devel::Cover::Condition_and_3 1.17
+      Devel::Cover::Condition_or_2 1.17
+      Devel::Cover::Condition_or_3 1.17
+      Devel::Cover::Condition_xor_4 1.17
+      Devel::Cover::Criterion 1.17
+      Devel::Cover::DB 1.17
+      Devel::Cover::DB::Criterion 1.17
+      Devel::Cover::DB::Digests 1.17
+      Devel::Cover::DB::File 1.17
+      Devel::Cover::DB::IO 1.17
+      Devel::Cover::DB::IO::JSON 1.17
+      Devel::Cover::DB::IO::Sereal 1.17
+      Devel::Cover::DB::IO::Storable 1.17
+      Devel::Cover::DB::Run 1.17
+      Devel::Cover::DB::Structure 1.17
+      Devel::Cover::Html_Common 1.17
+      Devel::Cover::Inc 1.17
+      Devel::Cover::Op 1.17
+      Devel::Cover::Pod 1.17
+      Devel::Cover::Report::Compilation 1.17
+      Devel::Cover::Report::Html 1.17
+      Devel::Cover::Report::Html_basic 1.17
+      Devel::Cover::Report::Html_basic::Template::Provider 1.17
+      Devel::Cover::Report::Html_minimal 1.17
+      Devel::Cover::Report::Html_subtle 1.17
+      Devel::Cover::Report::Html_subtle::Template::Provider 1.17
+      Devel::Cover::Report::Json 1.17
+      Devel::Cover::Report::Sort 1.17
+      Devel::Cover::Report::Text 1.17
+      Devel::Cover::Report::Text2 1.17
+      Devel::Cover::Report::Vim 1.17
+      Devel::Cover::Report::Vim::Template::Provider 1.17
+      Devel::Cover::Statement 1.17
+      Devel::Cover::Subroutine 1.17
+      Devel::Cover::Test 1.17
+      Devel::Cover::Time 1.17
+      Devel::Cover::Truth_Table 1.17
+      Devel::Cover::Truth_Table::Row 1.17
+      Devel::Cover::Util 1.17
+      Devel::Cover::Web 1.17
+    requirements:
+      CGI 0
+      Digest::MD5 0
+      ExtUtils::MakeMaker 0
+      Storable 0
+      Test::More 0
+      Test::Warn 0
+  Devel-Cover-Report-Coveralls-0.11
+    pathname: M/MI/MIKIHOSHI/Devel-Cover-Report-Coveralls-0.11.tar.gz
+    provides:
+      Devel::Cover::Report::Coveralls 0.11
+    requirements:
+      Devel::Cover 1.02
+      HTTP::Tiny 0.043
+      IO::Socket::SSL 1.42
+      JSON::PP 0
+      Module::Build 0.38
+      Mozilla::CA 0
+      Net::SSLeay 1.49
+      YAML 0
+      perl 5.008005
   Dist-CheckConflicts-0.11
     pathname: D/DO/DOY/Dist-CheckConflicts-0.11.tar.gz
     provides:
@@ -825,6 +898,34 @@ DISTRIBUTIONS
       XSLoader 0
       base 0
       perl 5.008
+  YAML-1.14
+    pathname: I/IN/INGY/YAML-1.14.tar.gz
+    provides:
+      YAML 1.14
+      YAML::Any 1.14
+      YAML::Dumper undef
+      YAML::Dumper::Base undef
+      YAML::Error undef
+      YAML::Loader undef
+      YAML::Loader::Base undef
+      YAML::Marshall undef
+      YAML::Mo 0.88
+      YAML::Node undef
+      YAML::Tag undef
+      YAML::Type::blessed undef
+      YAML::Type::code undef
+      YAML::Type::glob undef
+      YAML::Type::ref undef
+      YAML::Type::regexp undef
+      YAML::Type::undef undef
+      YAML::Types undef
+      YAML::Warning undef
+      yaml_mapping undef
+      yaml_scalar undef
+      yaml_sequence undef
+    requirements:
+      ExtUtils::MakeMaker 0
+      perl 5.008001
   common-sense-3.73
     pathname: M/ML/MLEHMANN/common-sense-3.73.tar.gz
     provides:

@@ -11,4 +11,5 @@ requires 'JSON::XS';
 on 'test' => sub {
     requires 'Test::More';
     requires 'Test::Mock::Furl';
+    requires 'Devel::Cover::Report::Coveralls';
 };

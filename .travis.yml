@@ -5,10 +5,11 @@ perl:
   - "5.20"
 
 before_install:
-  - cpanm -n git://github.com/kan/coveralls-perl.git
-script: perl Build.PL && make && cover -test
-after_success:
-  - cover -report coveralls
+  - cpanm Carton
+install:
+  - carton install
+script:
+  - carton exec prove -lrv t
 
 notifications:
   emails:

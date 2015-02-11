@@ -2,7 +2,7 @@ package WebService::Slack::WebApi::Im;
 use strict;
 use warnings;
 use utf8;
-use 5.18.0;
+use 5.10.0;
 
 use parent 'WebService::Slack::WebApi::Base';
 

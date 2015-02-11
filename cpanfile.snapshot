@@ -214,12 +214,12 @@ DISTRIBUTIONS
       File::Spec 0
       strict 0
       warnings 0
-  Furl-3.05
-    pathname: T/TO/TOKUHIROM/Furl-3.05.tar.gz
+  Furl-3.06
+    pathname: T/TO/TOKUHIROM/Furl-3.06.tar.gz
     provides:
-      Furl 3.05
+      Furl 3.06
       Furl::ConnectionCache undef
-      Furl::HTTP 3.05
+      Furl::HTTP 3.06
       Furl::Headers undef
       Furl::Request undef
       Furl::Response undef

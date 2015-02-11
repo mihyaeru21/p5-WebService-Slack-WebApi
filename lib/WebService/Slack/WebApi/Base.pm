@@ -2,7 +2,7 @@ package WebService::Slack::WebApi::Base;
 use strict;
 use warnings;
 use utf8;
-use 5.18.0;
+use 5.10.0;
 
 use Data::Validator;
 use Class::Accessor::Lite (

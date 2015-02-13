@@ -4,6 +4,7 @@ use utf8;
 use 5.10.0;
 
 use Test::More;
+use Test::Exception;
 use t::Util qw/ slack set_mock_response /;
 
 subtest 'test' => sub {
@@ -24,6 +25,13 @@ subtest 'test' => sub {
             piyo => '!!',
         },
     };
+};
+
+subtest 'response failure' => sub {
+    set_mock_response +{}, 0;
+    throws_ok {
+        slack->api->test(hoge => 'fuga', piyo => '!!');
+    } 'WebService::Slack::WebApi::Exception::FailureResponse';
 };
 
 done_testing;

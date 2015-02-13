@@ -7,6 +7,8 @@ use 5.10.0;
 use Furl;
 use JSON::XS;
 use HTTP::Request::Common;
+use WebService::Slack::WebApi::Exception;
+
 use Class::Accessor::Lite::Lazy (
     new     => 1,
     rw      => [qw/ team token /],
@@ -34,7 +36,10 @@ sub request {
 
     return decode_json $response->content if $response->is_success;
 
-    die 'fixme!!';
+    WebService::Slack::WebApi::Exception::FailureResponse->throw(
+        message  => 'request failed.',
+        response => $response,
+    );
 }
 
 1;

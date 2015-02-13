@@ -1,8 +1,10 @@
 requires 'perl', '5.010';
 
+requires 'Class::Accessor::Lite';
 requires 'Class::Accessor::Lite::Lazy';
 requires 'Class::Load';
 requires 'Data::Validator';
+requires 'Exception::Tiny';
 requires 'Furl';
 requires 'HTTP::Request::Common';
 requires 'IO::Socket::SSL';

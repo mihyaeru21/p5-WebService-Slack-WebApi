@@ -249,6 +249,19 @@ DISTRIBUTIONS
       Encode::Alias 0
       ExtUtils::MakeMaker 0
       perl 5.008
+  Exception-Tiny-v0.2.1
+    pathname: Y/YA/YAPPO/Exception-Tiny-v0.2.1.tar.gz
+    provides:
+      Exception::Tiny 0.002001
+    requirements:
+      Class::Accessor::Lite 0.05
+      Data::Dumper 0
+      Module::Build 0.38
+      Scalar::Util 0
+      Test::More 0.98
+      Test::Requires 0
+      parent 0
+      perl 5.008005
   ExtUtils-Config-0.008
     pathname: L/LE/LEONT/ExtUtils-Config-0.008.tar.gz
     provides:

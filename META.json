@@ -42,9 +42,11 @@
       },
       "runtime" : {
          "requires" : {
+            "Class::Accessor::Lite" : "0",
             "Class::Accessor::Lite::Lazy" : "0",
             "Class::Load" : "0",
             "Data::Validator" : "0",
+            "Exception::Tiny" : "0",
             "Furl" : "0",
             "HTTP::Request::Common" : "0",
             "IO::Socket::SSL" : "0",
@@ -54,6 +56,7 @@
       },
       "test" : {
          "requires" : {
+            "Devel::Cover::Report::Coveralls" : "0",
             "Test::Mock::Furl" : "0",
             "Test::More" : "0"
          }

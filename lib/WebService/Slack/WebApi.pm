@@ -78,6 +78,11 @@ You describe as below to call C<Chat::post_message> method.
 
     my $result = $slack->chat->post_message;
 
+=head2 Return value
+
+All methods return HashRef.
+When you want to know what is contained in HashRef, see the API reference.
+
 =head2 The token parameter
 
 The API reference shows C<chat.update> method require 4 parameters: C<token>, C<ts>, C<channel> and C<text>.

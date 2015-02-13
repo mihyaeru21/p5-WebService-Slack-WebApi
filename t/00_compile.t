@@ -2,9 +2,10 @@ use strict;
 use warnings;
 use utf8;
 use 5.10.0;
+
 use Test::More;
 
-use_ok $_ for qw(
+use_ok $_ for qw/
     WebService::Slack::WebApi
     WebService::Slack::WebApi::Im
     WebService::Slack::WebApi::Rtm
@@ -20,6 +21,7 @@ use_ok $_ for qw(
     WebService::Slack::WebApi::Groups
     WebService::Slack::WebApi::Search
     WebService::Slack::WebApi::Channels
-);
+/;
 
 done_testing;
+

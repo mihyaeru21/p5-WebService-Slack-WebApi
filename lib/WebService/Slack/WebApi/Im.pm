@@ -18,11 +18,11 @@ use WebService::Slack::WebApi::Generator (
         count     => { isa => 'Int',  optional => 1 },
     },
     list => +{},
-    mark => +{
+    mark => {
         channel => 'Str',
         ts      => 'Str',
     },
-    open => +{
+    open => {
         user => 'Str',
     },
 );

@@ -74,5 +74,8 @@
          "web" : "https://github.com/mihyaeru21/p5-WebService-Slack-WebApi"
       }
    },
-   "version" : "0.01"
+   "version" : "0.02",
+   "x_contributors" : [
+      "likkradyus <git@li.que.jp>"
+   ]
 }

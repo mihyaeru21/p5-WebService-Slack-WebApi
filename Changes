@@ -2,6 +2,9 @@ Revision history for Perl extension WebService-Slack-WebApi
 
 {{$NEXT}}
 
+0.02 2015-05-08T04:29:21Z
+    - add 'as_user' argument to chat.postMessage method (thx Likk)
+
 0.01 2015-02-13T13:15:21Z
 
     - original version

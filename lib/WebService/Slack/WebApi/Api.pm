@@ -6,10 +6,9 @@ use 5.10.0;
 
 use parent 'WebService::Slack::WebApi::Base';
 
-sub test {
-    my ($self, %args) = shift;
-    return $self->request('test', \%args);
-}
+use WebService::Slack::WebApi::Generator (
+    test => +{},
+);
 
 1;
 

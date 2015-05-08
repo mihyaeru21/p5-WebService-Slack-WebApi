@@ -32,11 +32,11 @@ sub post_message {
         unfurl_media => { isa => 'Str',      optional => 1 },
         icon_url     => { isa => 'Str',      optional => 1 },
         icon_emoji   => { isa => 'Str',      optional => 1 },
-    )->with('Method');
-    my ($self, $args) = $rule->validate(@_);
+    )->with('Method', 'AllowExtra');
+    my ($self, $args, %extra) = $rule->validate(@_);
 
     $args->{attachments} = encode_json $args->{attachments} if exists $args->{attachments};
-    return $self->request('postMessage', $args);
+    return $self->request('postMessage', {%$args, %extra});
 }
 
 1;

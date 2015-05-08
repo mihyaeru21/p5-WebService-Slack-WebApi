@@ -34,13 +34,13 @@ sub upload {
         title           => { isa => 'Str', optional => 1 },
         initial_comment => { isa => 'Str', optional => 1 },
         channels        => { isa => 'ArrayRef[Str]', optional => 1 },
-    )->with('Method');
-    my ($self, $args) = $rule->validate(@_);
+    )->with('Method', 'AllowExtra');
+    my ($self, $args, %extra) = $rule->validate(@_);
 
     $args->{file} = [$args->{file}] if exists $args->{file};
     $args->{channels} = join ',', @{$args->{channels}} if exists $args->{channels};
 
-    return $self->request('upload', $args);
+    return $self->request('upload', {%$args, %extra});
 }
 
 1;

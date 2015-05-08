@@ -14,9 +14,9 @@ sub import {
 
         no strict 'refs';
         *$method = sub {
-            state $v = Data::Validator->new(%$rule)->with('Method');
-            my ($self, $args) = $v->validate(@_);
-            return $self->request($path, $args);
+            state $v = Data::Validator->new(%$rule)->with('Method', 'AllowExtra');
+            my ($self, $args, %extra) = $v->validate(@_);
+            return $self->request($path, {%$args, %extra});
         };
     }
 }

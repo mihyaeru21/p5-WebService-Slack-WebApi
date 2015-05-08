@@ -2,6 +2,10 @@ Revision history for Perl extension WebService-Slack-WebApi
 
 {{$NEXT}}
 
+0.03 2015-05-08T06:36:17Z
+    - change attachments's type from Str to ArrayRef
+    - allow extra arguments
+
 0.02 2015-05-08T04:29:21Z
     - add 'as_user' argument to chat.postMessage method (thx Likk)
 

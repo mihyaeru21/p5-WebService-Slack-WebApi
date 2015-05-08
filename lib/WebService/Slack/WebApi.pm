@@ -56,7 +56,7 @@ WebService::Slack::WebApi - a simple wrapper for Slack Web API
     # posting message to specified channel and getting message description
     my $posted_message = $slack->chat->post_message(
         channel  => 'channel id', # required
-        text     => 'hoge',       # required
+        text     => 'hoge',       # required (not required if 'attachments' argument exists)
         username => 'fuga',       # optional
         # othre optional parameters...
     );

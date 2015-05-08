@@ -17,6 +17,7 @@ use WebService::Slack::WebApi::Generator (
         username     => { isa => 'Str',  optional => 1 },
         parse        => { isa => 'Str',  optional => 1 },
         link_names   => { isa => 'Bool', optional => 1 },
+        as_user      => { isa => 'Bool', optional => 1 },
         attachments  => { isa => 'Str',  optional => 1 },
         unfurl_links => { isa => 'Str',  optional => 1 },
         unfurl_media => { isa => 'Str',  optional => 1 },

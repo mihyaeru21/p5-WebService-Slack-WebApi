@@ -138,6 +138,9 @@ my %tests = (
             inclusive => 1,
             count     => 100,
         },
+        info => {
+            channel => 'hoge',
+        },
         invite => {
             channel => 'hoge',
             user    => 'fuga',
@@ -238,6 +241,13 @@ my %tests = (
             count => 100,
             page  => 2,
         },
+    },
+    team => {
+        access_logs => {
+            count => 100,
+            page  => 2,
+        },
+        info => {},
     },
     users => {
         get_presence => {

@@ -14,10 +14,10 @@ subtest 'new' => sub {
         is $obj->token, 'hoge';
     };
 
-    subtest 'with_team_token' => sub {
-        my $obj = WebService::Slack::WebApi->new(team => 'foo', token => 'hoge');
+    subtest 'with_team_domain_token' => sub {
+        my $obj = WebService::Slack::WebApi->new(team_domain => 'foo', token => 'hoge');
         isa_ok $obj, 'WebService::Slack::WebApi';
-        is $obj->team,  'foo';
+        is $obj->team_domain, 'foo';
         is $obj->token, 'hoge';
     };
 };
@@ -37,6 +37,7 @@ subtest 'methods' => sub {
         rtm      => 'WebService::Slack::WebApi::Rtm',
         search   => 'WebService::Slack::WebApi::Search',
         stars    => 'WebService::Slack::WebApi::Stars',
+        team     => 'WebService::Slack::WebApi::Team',
         users    => 'WebService::Slack::WebApi::Users',
     );
     my $obj = WebService::Slack::WebApi->new(token => 'hoge');

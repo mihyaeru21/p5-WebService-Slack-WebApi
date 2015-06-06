@@ -11,7 +11,7 @@ use WebService::Slack::WebApi::Exception;
 
 use Class::Accessor::Lite::Lazy (
     new     => 1,
-    rw      => [qw/ team token /],
+    rw      => [qw/ team_domain token /],
     ro_lazy => [qw/ ua /],
 );
 
@@ -19,8 +19,8 @@ sub _build_ua { Furl->new() }
 
 sub base_url {
     my $self = shift;
-    my $team = $self->team ? $self->team . '.' : '';
-    return sprintf 'https://%sslack.com/api', $team;
+    my $team_domain = $self->team_domain ? $self->team_domain . '.' : '';
+    return sprintf 'https://%sslack.com/api', $team_domain;
 }
 
 sub request {

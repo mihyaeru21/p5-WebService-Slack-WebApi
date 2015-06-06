@@ -7,8 +7,8 @@ use 5.10.0;
 use Class::Load qw/ load_class /;
 use Class::Accessor::Lite::Lazy (
     new     => 1,
-    rw      => [qw/ team token /],
-    ro_lazy => [qw/ client api auth channels chat emoji files groups im oauth rtm search stars users /],
+    rw      => [qw/ team_domain token /],
+    ro_lazy => [qw/ client api auth channels chat emoji files groups im oauth rtm search stars team users /],
 );
 
 use WebService::Slack::WebApi::Client;
@@ -18,12 +18,12 @@ our $VERSION = '0.03';
 sub _build_client {
     my $self = shift;
     return WebService::Slack::WebApi::Client->new(
-        team  => $self->team,
-        token => $self->token,
+        team_domain => $self->team_domain,
+        token       => $self->token,
     );
 }
 
-for my $class_name (qw/ api auth channels chat emoji files groups im oauth rtm search stars users /) {
+for my $class_name (qw/ api auth channels chat emoji files groups im oauth rtm search stars team users /) {
     my $method = sprintf '%s::_build_%s', __PACKAGE__, $class_name;
     my $class  = sprintf '%s::%s', __PACKAGE__, ucfirst($class_name);
 

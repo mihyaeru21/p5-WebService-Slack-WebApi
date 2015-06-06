@@ -26,6 +26,9 @@ use WebService::Slack::WebApi::Generator (
         inclusive => { isa => 'Bool', optional => 1 },
         count     => { isa => 'Int',  optional => 1 },
     },
+    info => {
+        channel => 'Str',
+    },
     invite => {
         channel => 'Str',
         user    => 'Str',

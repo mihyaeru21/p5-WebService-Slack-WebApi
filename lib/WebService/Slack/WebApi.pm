@@ -13,7 +13,7 @@ use Class::Accessor::Lite::Lazy (
 
 use WebService::Slack::WebApi::Client;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 sub _build_client {
     my $self = shift;

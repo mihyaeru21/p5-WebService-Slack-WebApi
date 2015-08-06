@@ -206,6 +206,35 @@ my %tests = (
             redirect_uri  => 'http://hoge.hoge',
         },
     },
+    reactions => {
+        add => {
+            name         => 'thumbsup',
+            file         => 'F1234567890',
+            file_comment => 'Fc1234567890',
+            channel      => 'C1234567890',
+            timestamp    => '1234567890.123456',
+        },
+        get => {
+            file         => 'F1234567890',
+            file_comment => 'Fc1234567890',
+            channel      => 'C1234567890',
+            timestamp    => '1234567890.123456',
+            full         => 1,
+        },
+        list => {
+            user  => 'U1234567890',
+            full  => 1,
+            count => 10,
+            page  => 2,
+        },
+        remove => {
+            name         => 'thumbsup',
+            file         => 'F1234567890',
+            file_comment => 'Fc1234567890',
+            channel      => 'C1234567890',
+            timestamp    => '1234567890.123456',
+        },
+    },
     rtm => {
         start => +{},
     },

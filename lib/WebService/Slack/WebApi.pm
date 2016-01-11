@@ -7,7 +7,7 @@ use 5.10.0;
 use Class::Load qw/ load_class /;
 use Class::Accessor::Lite::Lazy (
     new     => 1,
-    rw      => [qw/ team_domain token /],
+    rw      => [qw/ team_domain token opt /],
     ro_lazy => [qw/ client api auth channels chat emoji files groups im oauth reactions rtm search stars team users /],
 );
 
@@ -20,6 +20,7 @@ sub _build_client {
     return WebService::Slack::WebApi::Client->new(
         team_domain => $self->team_domain,
         token       => $self->token,
+        opt         => $self->opt,
     );
 }
 
@@ -65,6 +66,18 @@ WebService::Slack::WebApi - a simple wrapper for Slack Web API
 
 WebService::Slack::WebApi is a simple wrapper for Slack Web API (https://api.slack.com/web).
 
+=head1 Options
+
+You can set some options by giving C<opt> parameter to C<new> method.
+Almost values of C<opt> are gived to C<Furl#new>.
+
+    WebService::Slack::WebApi->new(token => 'access token', opt => {});
+
+=head2 Proxy
+
+C<opt> can contain C<env_proxy> as boolean value .
+If C<env_proxy> is true then proxy settings are loaded from C<$ENV{HTTP_PROXY}> and C<$ENV{NO_PROXY}> by calling C<Furl#env_proxy> method.
+See also https://metacpan.org/pod/Furl#furl-env_proxy.
 
 =head1 METHODS
 

@@ -11,11 +11,18 @@ use WebService::Slack::WebApi::Exception;
 
 use Class::Accessor::Lite::Lazy (
     new     => 1,
-    rw      => [qw/ team_domain token /],
+    rw      => [qw/ team_domain token opt /],
     ro_lazy => [qw/ ua /],
 );
 
-sub _build_ua { Furl->new() }
+sub _build_ua {
+    my $self = shift;
+    my %opt = %{ $self->opt // +{} };
+    my $env_proxy = delete $opt{env_proxy};
+    my $ua = Furl->new(%opt);
+    $ua->env_proxy if $env_proxy;
+    return $ua;
+}
 
 sub base_url {
     my $self = shift;

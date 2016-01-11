@@ -25,6 +25,19 @@ WebService::Slack::WebApi - a simple wrapper for Slack Web API
 
 WebService::Slack::WebApi is a simple wrapper for Slack Web API (https://api.slack.com/web).
 
+# Options
+
+You can set some options by giving `opt` parameter to `new` method.
+Almost values of `opt` are gived to `Furl#new`.
+
+    WebService::Slack::WebApi->new(token => 'access token', opt => {});
+
+## Proxy
+
+`opt` can contain `env_proxy` as boolean value .
+If `env_proxy` is true then proxy settings are loaded from `$ENV{HTTP_PROXY}` and `$ENV{NO_PROXY}` by calling `Furl#env_proxy` method.
+See also https://metacpan.org/pod/Furl#furl-env\_proxy.
+
 # METHODS
 
 This module provides all methods declared in the API reference (https://api.slack.com/methods).

@@ -46,5 +46,22 @@ subtest 'methods' => sub {
     }
 };
 
+subtest 'opts' => sub {
+    subtest 'proxy' => sub {
+        subtest 'proxy' => sub {
+            my $obj = WebService::Slack::WebApi->new(token => 'hoge', opt => {proxy => 'proxy'});
+            my $ua = $obj->client->ua;
+            is $$ua->{proxy}, 'proxy';
+        };
+
+        subtest 'env_proxy' => sub {
+            local $ENV{HTTP_PROXY} = 'proxy';
+            my $obj = WebService::Slack::WebApi->new(token => 'hoge', opt => {env_proxy => 1});
+            my $ua = $obj->client->ua;
+            is $$ua->{proxy}, 'proxy';
+        };
+    };
+};
+
 done_testing;
 

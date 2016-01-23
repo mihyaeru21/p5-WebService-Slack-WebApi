@@ -59,7 +59,7 @@ WebService::Slack::WebApi - a simple wrapper for Slack Web API
         channel  => 'channel id', # required
         text     => 'hoge',       # required (not required if 'attachments' argument exists)
         username => 'fuga',       # optional
-        # othre optional parameters...
+        # other optional parameters...
     );
 
 =head1 DESCRIPTION

@@ -282,6 +282,7 @@ my %tests = (
         get_presence => {
             user => 'hoge',
         },
+        identity     => +{},
         info => {
             user => 'hoge',
         },

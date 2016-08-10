@@ -10,6 +10,7 @@ use WebService::Slack::WebApi::Generator (
     get_presence => {
         user => 'Str',
     },
+    identity     => +{},
     info => {
         user => 'Str',
     },

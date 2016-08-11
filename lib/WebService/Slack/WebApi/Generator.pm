@@ -2,7 +2,7 @@ package WebService::Slack::WebApi::Generator;
 use strict;
 use warnings;
 use utf8;
-use 5.10.0;
+use feature qw/state/;
 
 sub import {
     my ($class, %rules) = @_;

@@ -2,7 +2,6 @@ package WebService::Slack::WebApi::Client;
 use strict;
 use warnings;
 use utf8;
-use 5.10.0;
 
 use Furl;
 use JSON::XS;

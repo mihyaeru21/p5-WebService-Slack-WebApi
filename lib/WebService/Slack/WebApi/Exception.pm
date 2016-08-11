@@ -2,7 +2,6 @@ package WebService::Slack::WebApi::Exception;
 use strict;
 use warnings;
 use utf8;
-use 5.10.0;
 use parent 'Exception::Tiny';
 
 package WebService::Slack::WebApi::Exception::FailureResponse;

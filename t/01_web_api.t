@@ -56,6 +56,7 @@ subtest 'opts' => sub {
 
         subtest 'env_proxy' => sub {
             local $ENV{HTTP_PROXY} = 'proxy';
+            local $ENV{http_proxy} = 'proxy';
             my $obj = WebService::Slack::WebApi->new(token => 'hoge', opt => {env_proxy => 1});
             my $ua = $obj->client->ua;
             is $$ua->{proxy}, 'proxy';

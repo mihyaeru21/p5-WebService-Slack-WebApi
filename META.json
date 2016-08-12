@@ -74,10 +74,11 @@
          "web" : "https://github.com/mihyaeru21/p5-WebService-Slack-WebApi"
       }
    },
-   "version" : "0.07",
+   "version" : "0.08",
    "x_contributors" : [
       "likkradyus <git@li.que.jp>",
       "Yanick Champoux <yanick@babyl.dyndns.org>",
-      "Sterling Hanenkamp <sterling@hanenkamp.com>"
+      "Sterling Hanenkamp <sterling@hanenkamp.com>",
+      "Steven Arnott <steven.arnott@grantstreet.com>"
    ]
 }

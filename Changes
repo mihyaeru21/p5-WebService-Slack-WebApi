@@ -2,6 +2,9 @@ Revision history for Perl extension WebService-Slack-WebApi
 
 {{$NEXT}}
 
+0.08 2016-08-12T01:57:54Z
+    - fix test (thx ArcticSnowman)
+
 0.07 2016-08-11T03:53:40Z
     - add users.identity method (thx zostay)
 

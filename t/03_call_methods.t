@@ -401,15 +401,20 @@ my %tests = (
         },
     },
     users => {
+        delete_photo => +{},
         get_presence => {
             user => 'hoge',
         },
-        identity     => +{},
+        identity => +{},
         info => {
             user => 'hoge',
         },
-        list         => +{},
-        set_active   => +{},
+        list => {
+            cursor   => 'dXNlcjpVMDYxTkZUVDI=',
+            limit    => 100,
+            presence => 1,
+        },
+        set_active => +{},
         set_presence => {
             presence => 'hoge',
         },

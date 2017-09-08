@@ -44,6 +44,7 @@ sub shared_public_url {
     return $self->request('sharedPublicURL', {%$args, %extra});
 }
 
+# FIXME: maybe be broken... https://github.com/mihyaeru21/p5-WebService-Slack-WebApi/issues/15
 sub upload {
     state $rule = Data::Validator->new(
         channels        => { isa => 'ArrayRef[Str]', optional => 1 },

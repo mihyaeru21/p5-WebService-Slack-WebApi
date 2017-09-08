@@ -364,10 +364,21 @@ my %tests = (
         },
     },
     stars => {
+        add => {
+            channel      => 'C1234567890',
+            file         => 'F1234567890',
+            file_comment => 'Fc1234567890',
+            timestamp    => '1234567890.123456',
+        },
         list => {
-            user  => 'hoge',
             count => 100,
             page  => 2,
+        },
+        add => {
+            channel      => 'C1234567890',
+            file         => 'F1234567890',
+            file_comment => 'Fc1234567890',
+            timestamp    => '1234567890.123456',
         },
     },
     team => {

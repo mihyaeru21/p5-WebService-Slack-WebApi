@@ -174,17 +174,19 @@ my %tests = (
             channel => 'hoge',
         },
         create => {
-            name => 'hoge',
+            name     => 'hoge',
+            validate => 1,
         },
         create_child => {
             channel => 'hoge',
         },
         history => {
             channel   => 'hoge',
+            count     => 100,
+            inclusive => 1,
             latest    => '1234567890.123456',
             oldest    => '1234567890.123456',
-            inclusive => 1,
-            count     => 100,
+            unreads   => 1,
         },
         info => {
             channel => 'hoge',
@@ -202,6 +204,7 @@ my %tests = (
         },
         list => {
             exclude_archived => 1,
+            exclude_members  => 1,
         },
         mark => {
             channel => 'hoge',
@@ -213,6 +216,10 @@ my %tests = (
         rename => {
             channel => 'hoge',
             name    => 'fuga',
+        },
+        replies => {
+            channel   => 'hoge',
+            thread_ts => '1234567890.123456',
         },
         set_purpose => {
             channel => 'hoge',

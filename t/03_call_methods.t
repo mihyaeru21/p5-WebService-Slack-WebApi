@@ -269,6 +269,13 @@ my %tests = (
             code          => 'piyo',
             redirect_uri  => 'http://hoge.hoge',
         },
+        access => {
+            client_id      => 'hoge',
+            client_secret  => 'fuga',
+            code           => 'piyo',
+            redirect_uri   => 'http://hoge.hoge',
+            single_channel => 1,
+        },
     },
     pins => {
         add => {

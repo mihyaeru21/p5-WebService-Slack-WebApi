@@ -239,18 +239,27 @@ my %tests = (
         },
         history => {
             channel   => 'hoge',
+            count     => 100,
+            inclusive => 1,
             latest    => '1234567890.123456',
             oldest    => '1234567890.123456',
-            inclusive => 1,
-            count     => 100,
+            unreads   => 1,
         },
-        list => +{},
+        list => {
+            cursor => 'dXNlcjpVMDYxTkZUVDI=',
+            limit  => 20,
+        },
         mark => {
             channel => 'hoge',
             ts      => '1234567890.123456',
         },
         open => {
-            user => 'hoge',
+            user      => 'hoge',
+            return_im => 1,
+        },
+        replies => {
+            channel   => 'hoge',
+            thread_ts => '1234567890.123456',
         },
     },
     oauth => {

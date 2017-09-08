@@ -8,6 +8,9 @@ use t::Util qw/ slack set_any_mock_response /;
 
 my %tests = (
     auth => {
+        revoke => {
+            test => 1,
+        },
         test => +{},
     },
     channels => {

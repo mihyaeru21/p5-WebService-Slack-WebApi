@@ -324,7 +324,18 @@ my %tests = (
         },
     },
     rtm => {
-        start => +{},
+        connect => {
+            batch_presence_aware => 1,
+            presence_sub         => 1,
+        },
+        start => {
+            batch_presence_aware => 1,
+            mpim_aware           => 1,
+            no_latest            => 1,
+            no_unreads           => 1,
+            presence_sub         => 1,
+            simple_latest        => 1,
+        },
     },
     search => {
         all => {

@@ -383,10 +383,22 @@ my %tests = (
     },
     team => {
         access_logs => {
+            before => 1457989166,
             count => 100,
             page  => 2,
         },
-        info => {},
+        billable_info => {
+            user => 'hoge',
+        },
+        info => +{},
+        integration_logs => {
+            app_id      => 'hoge',
+            change_type => 'add',
+            count       => 20,
+            page        => 1,
+            service_id  => 'hoge',
+            user        => 'hoge',
+        },
     },
     users => {
         get_presence => {

@@ -18,14 +18,16 @@ my %tests = (
             channel => 'hoge',
         },
         create => {
-            name => 'hoge',
+            name     => 'hoge',
+            validate => 1,
         },
         history => {
             channel   => 'hoge',
+            count     => 100,
+            inclusive => 1,
             latest    => '1234567890.123456',
             oldest    => '1234567890.123456',
-            inclusive => 1,
-            count     => 100,
+            unreads   => 1,
         },
         info => {
             channel => 'hoge',
@@ -35,7 +37,8 @@ my %tests = (
             user    => 'hoge',
         },
         join => {
-            name => 'hoge',
+            name     => 'hoge',
+            validate => 1,
         },
         kick => {
             channel => 'hoge',
@@ -45,7 +48,10 @@ my %tests = (
             channel => 'hoge',
         },
         list => {
+            cursor           => 'dXNlcjpVMDYxTkZUVDI=',
             exclude_archived => 1,
+            exclude_members  => 1,
+            limit            => 20,
         },
         mark => {
             channel => 'hoge',
@@ -54,6 +60,10 @@ my %tests = (
         rename => {
             channel => 'hoge',
             name    => 'hoge',
+        },
+        replies => {
+            channel   => 'hoge',
+            thread_ts => '1234567890.123456',
         },
         set_purpose => {
             channel => 'hoge',

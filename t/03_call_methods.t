@@ -142,21 +142,28 @@ my %tests = (
             page  => 2,
         },
         list => {
-            user    => 'user_id',
+            channel => 'hoge',
+            count   => 10,
+            page    => 2,
             ts_from => '1234567890.123456',
             ts_to   => '1234567890.123456',
             types   => 'image',
-            count   => 10,
-            page    => 2,
+            user    => 'user_id',
+        },
+        revoke_public_url => {
+            file => 'file_id',
+        },
+        shared_public_url => {
+            file => 'file_id',
         },
         upload => {
-            file            => __FILE__,       # using this file
-            content         => 'hoge content',
-            filetype        => 'type',
-            filename        => 'name',
-            title           => 'hoge title',
-            initial_comment => 'initial hoge',
             channels        => ['hoge', 'fuga'],
+            content         => 'hoge content',
+            file            => __FILE__,       # using this file
+            filename        => 'name',
+            filetype        => 'type',
+            initial_comment => 'initial hoge',
+            title           => 'hoge title',
         },
     },
     groups => {

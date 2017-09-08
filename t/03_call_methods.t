@@ -206,6 +206,23 @@ my %tests = (
             redirect_uri  => 'http://hoge.hoge',
         },
     },
+    pins => {
+        add => {
+            channel      => 'C1234567890',
+            file         => 'F1234567890',
+            file_comment => 'Fc1234567890',
+            timestamp    => '1234567890.123456',
+        },
+        list => {
+            channel => 'C1234567890',
+        },
+        remove => {
+            channel      => 'C1234567890',
+            file         => 'F1234567890',
+            file_comment => 'Fc1234567890',
+            timestamp    => '1234567890.123456',
+        },
+    },
     reactions => {
         add => {
             name         => 'thumbsup',

@@ -7,13 +7,19 @@ use parent 'WebService::Slack::WebApi::Base';
 
 use WebService::Slack::WebApi::Generator (
     add => {
-        channel   => 'Str',
-        timestamp => 'Str',
+        channel      => 'Str',
+        file         => { isa => 'Str', optional => 1 },
+        file_comment => { isa => 'Str', optional => 1 },
+        timestamp    => { isa => 'Str', optional => 1 },
     },
-    list     => +{},
+    list => {
+        channel => 'Str',
+    },
     remove => {
-        channel   => 'Str',
-        timestamp => 'Str',
+        channel      => 'Str',
+        file         => { isa => 'Str', optional => 1 },
+        file_comment => { isa => 'Str', optional => 1 },
+        timestamp    => { isa => 'Str', optional => 1 },
     },
 );
 

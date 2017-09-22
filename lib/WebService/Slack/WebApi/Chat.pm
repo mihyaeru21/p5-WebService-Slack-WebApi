@@ -25,8 +25,6 @@ use WebService::Slack::WebApi::Generator (
         user_auth_required => { isa => 'Bool', optional => 1 },
         user_auth_url      => { isa => 'Str',  optional => 1 },
     },
-    update => {
-    },
 );
 
 sub post_ephemeral {

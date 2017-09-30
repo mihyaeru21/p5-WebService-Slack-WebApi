@@ -74,7 +74,7 @@
          "web" : "https://github.com/mihyaeru21/p5-WebService-Slack-WebApi"
       }
    },
-   "version" : "0.09",
+   "version" : "0.10",
    "x_contributors" : [
       "Askar Timirgazin <anotheroneackap@gmail.com>",
       "Sterling Hanenkamp <sterling@hanenkamp.com>",

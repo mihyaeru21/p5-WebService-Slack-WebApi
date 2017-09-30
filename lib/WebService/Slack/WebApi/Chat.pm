@@ -30,7 +30,7 @@ use WebService::Slack::WebApi::Generator (
 sub post_ephemeral {
     state $rule = Data::Validator->new(
         channel      => 'Str',
-        text         => 'Str',
+        text         => { isa => 'Str',      optional => 1 },
         user         => 'Str',
         as_user      => { isa => 'Bool',     optional => 1 },
         attachments  => { isa => 'ArrayRef', optional => 1 },
@@ -46,7 +46,7 @@ sub post_ephemeral {
 sub post_message {
     state $rule = Data::Validator->new(
         channel         => 'Str',
-        text            => 'Str',
+        text            => { isa => 'Str',      optional => 1 },
         as_user         => { isa => 'Bool',     optional => 1 },
         attachments     => { isa => 'ArrayRef', optional => 1 },
         icon_emoji      => { isa => 'Str',      optional => 1 },
@@ -68,7 +68,7 @@ sub post_message {
 sub update {
     state $rule = Data::Validator->new(
         channel     => 'Str',
-        text        => 'Str',
+        text        => { isa => 'Str',      optional => 1 },
         ts          => 'Str',
         as_user     => { isa => 'Bool',     optional => 1 },
         attachments => { isa => 'ArrayRef', optional => 1 },

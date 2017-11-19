@@ -4,6 +4,7 @@ use utf8;
 use 5.10.0;
 
 use Test::More;
+use lib '.';
 use t::Util qw/ slack set_any_mock_response /;
 
 my %tests = (

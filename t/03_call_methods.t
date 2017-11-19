@@ -129,6 +129,12 @@ my %tests = (
             parse       => 'hoge',
         },
     },
+    dialog => {
+        open => {
+            trigger_id => '13345224609.738474920.8088930838d88f008e0',
+            dialog     => {callback_id=>'test',title=>'Nice Dialog',submit_label=>'Do It',elements=>[{type=>'text',label=>'Something',name=>'something'}]},
+        },
+    },
     emoji => {
         list => +{},
     },

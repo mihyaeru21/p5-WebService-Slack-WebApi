@@ -27,7 +27,7 @@ sub set {
     )->with('Method', 'AllowExtra');
     my ($self, $args, %extra) = $rule->validate(@_);
 
-    $args->{profile} = encode_json $args->{profile} if $args->{profile};
+    $args->{profile} = encode_json $args->{profile} if exists $args->{profile};
     return $self->request('set', { %$args, %extra });
 }
 

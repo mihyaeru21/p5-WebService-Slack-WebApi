@@ -65,7 +65,7 @@ use WebService::Slack::WebApi::Generator (
     replies => {
         channel   => 'Str',
         ts        => 'Str',
-        cursor    =>  { isa => 'Str',  optional => 1 },
+        cursor    => { isa => 'Str',  optional => 1 },
         inclusive => { isa => 'Bool', optional => 1 },
         latest    => { isa => 'Int',  optional => 1 },
         limit     => { isa => 'Int',  optional => 1 },

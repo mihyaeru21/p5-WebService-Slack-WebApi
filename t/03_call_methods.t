@@ -141,7 +141,7 @@ my %tests = (
             cursor    => 'dXNlcjpVMDYxTkZUVDI=',
             inclusive => 1,
             latest    => '1234567890.123456',
-            limit     => 100
+            limit     => 100,
             oldest    => '1234567890.123456',
         },
         set_purpose => {

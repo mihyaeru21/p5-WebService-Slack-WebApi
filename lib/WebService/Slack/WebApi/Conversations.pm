@@ -67,9 +67,9 @@ use WebService::Slack::WebApi::Generator (
         ts        => 'Str',
         cursor    => { isa => 'Str',  optional => 1 },
         inclusive => { isa => 'Bool', optional => 1 },
-        latest    => { isa => 'Int',  optional => 1 },
+        latest    => { isa => 'Str',  optional => 1 },
         limit     => { isa => 'Int',  optional => 1 },
-        oldest    => { isa => 'Int',  optional => 1 },
+        oldest    => { isa => 'Str',  optional => 1 },
     },
     set_purpose => {
         channel => 'Str',

@@ -42,6 +42,7 @@ subtest 'types' => sub {
         stars         => 'WebService::Slack::WebApi::Stars',
         team          => 'WebService::Slack::WebApi::Team',
         users         => 'WebService::Slack::WebApi::Users',
+        dnd           => 'WebService::Slack::WebApi::Dnd',
     );
     my $obj = WebService::Slack::WebApi->new(token => 'hoge');
     while (my ($method, $type) = each %methods) {

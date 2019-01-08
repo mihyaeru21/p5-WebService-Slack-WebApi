@@ -504,6 +504,19 @@ my %tests = (
             presence => 'hoge',
         },
     },
+    dnd => {
+        endDnd => +{},
+        endSnooze => +{},
+        info => {
+            user => 'hoge',
+        },
+        setSnooze => {
+            num_minutes => '60',
+        },
+        teamInfo => {
+            users => 'hoge,fugo',
+        },
+    },
 );
 
 set_any_mock_response;

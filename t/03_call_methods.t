@@ -130,7 +130,7 @@ my %tests = (
             channel => 'hoge',
             return_im => 1,
             users => 1,
-        }
+        },
         rename => {
             channel => 'hoge',
             name    => 'hoge',

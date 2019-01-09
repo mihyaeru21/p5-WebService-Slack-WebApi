@@ -74,10 +74,11 @@
          "web" : "https://github.com/mihyaeru21/p5-WebService-Slack-WebApi"
       }
    },
-   "version" : "0.13",
+   "version" : "0.14",
    "x_contributors" : [
       "Askar Timirgazin <anotheroneackap@gmail.com>",
       "Ivan Wills <Ivan.Wills2@optus.com.au>",
+      "Matt Hallacy <mhallacy+github@haproxy.com>",
       "Sterling Hanenkamp <sterling@hanenkamp.com>",
       "Sterling Hanenkamp <sterling@ziprecruiter.com>",
       "Steven Arnott <steven.arnott@grantstreet.com>",

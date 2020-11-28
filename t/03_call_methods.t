@@ -106,7 +106,7 @@ my %tests = (
             user    => 'hoge',
         },
         join => {
-            name     => 'hoge',
+            channel => 'hoge',
         },
         kick => {
             channel => 'hoge',

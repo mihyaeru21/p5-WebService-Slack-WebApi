@@ -7,6 +7,7 @@ jobs:
     name: Run Test with Perl ${{ matrix.perl }}
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         perl:
           - '5.10'
@@ -21,6 +22,9 @@ jobs:
           perl-version: ${{ matrix.perl }}
       - run: perl -V
       - run: carton install
-      - run: HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^local/|^t/" carton exec -- prove -lrv t
-      - run: carton exec -- cover -report coveralls
+      - name: Run tests
+        env:
+          HARNESS_PERL_SWITCHES: '-MDevel::Cover=+ignore,^local/|^t/'
+        run: |
+          carton exec -- prove -lrv t
 

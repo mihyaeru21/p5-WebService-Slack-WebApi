@@ -1,4 +1,4 @@
-[![Coverage Status](https://img.shields.io/coveralls/mihyaeru21/p5-WebService-Slack-WebApi/master.svg?style=flat)](https://coveralls.io/r/mihyaeru21/p5-WebService-Slack-WebApi?branch=master)
+![test](https://github.com/mihyaeru21/p5-WebService-Slack-WebApi/workflows/test/badge.svg) [![Coverage Status](https://img.shields.io/coveralls/mihyaeru21/p5-WebService-Slack-WebApi/master.svg?style=flat)](https://coveralls.io/r/mihyaeru21/p5-WebService-Slack-WebApi?branch=master)
 
 # NAME
 

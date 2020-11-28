@@ -1,0 +1,42 @@
+name: test
+
+on: push
+
+jobs:
+  test:
+    name: Run Test with Perl ${{ matrix.perl }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        perl:
+          - '5.10'
+          - '5.28'
+          - '5.30'
+          - '5.32'
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup perl
+        uses: shogo82148/actions-setup-perl@v1
+        with:
+          perl-version: ${{ matrix.perl }}
+      - run: perl -V
+      - name: Cache local files
+        uses: actions/cache@v2
+        with:
+          path: ./local
+          key: ${{ runner.os }}-perl-${{ matrix.perl }}-${{ hashFiles('./cpanfile.snapshot') }}
+      - run: carton install
+      - name: Run tests
+        env:
+          HARNESS_PERL_SWITCHES: '-MDevel::Cover=+ignore,^local/|^t/'
+        run: |
+          carton exec -- prove -lrv t
+      - name: Coveralls
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          COVERALLS_FLAG_NAME: perl-${{ matrix.perl }}
+        run: |
+          echo $COVERALLS_FLAG_NAME
+          carton exec -- cover -report coveralls
+

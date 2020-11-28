@@ -21,6 +21,11 @@ jobs:
         with:
           perl-version: ${{ matrix.perl }}
       - run: perl -V
+      - name: Cache local files
+        uses: actions/cache@v2
+        with:
+          path: ./local
+          key: ${{ runner.os }}-perl-${{ matrix.perl }}-${{ hashFiles('./cpanfile.snapshot') }}
       - run: carton install
       - name: Run tests
         env:

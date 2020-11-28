@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/mihyaeru21/p5-WebService-Slack-WebApi.svg?branch=master)](https://travis-ci.org/mihyaeru21/p5-WebService-Slack-WebApi) [![Coverage Status](https://img.shields.io/coveralls/mihyaeru21/p5-WebService-Slack-WebApi/master.svg?style=flat)](https://coveralls.io/r/mihyaeru21/p5-WebService-Slack-WebApi?branch=master)
+[![Coverage Status](https://img.shields.io/coveralls/mihyaeru21/p5-WebService-Slack-WebApi/master.svg?style=flat)](https://coveralls.io/r/mihyaeru21/p5-WebService-Slack-WebApi?branch=master)
+
 # NAME
 
 WebService::Slack::WebApi - a simple wrapper for Slack Web API

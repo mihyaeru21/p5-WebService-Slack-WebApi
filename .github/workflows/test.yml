@@ -1,0 +1,26 @@
+name: test
+
+on: push
+
+jobs:
+  test:
+    name: Run Test with Perl ${{ matrix.perl }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        perl:
+          - 5.10
+          - 5.28
+          - 5.30
+          - 5.32
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup perl
+        uses: shogo82148/actions-setup-perl@v1
+        with:
+          perl-version: ${{ matrix.perl }}
+      - run: perl -V
+      - run: carton install
+      - run: HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^local/|^t/" carton exec -- prove -lrv t
+      - run: carton exec -- cover -report coveralls
+

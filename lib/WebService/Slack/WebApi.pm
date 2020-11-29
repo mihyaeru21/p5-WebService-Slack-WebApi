@@ -68,7 +68,7 @@ WebService::Slack::WebApi is a simple wrapper for Slack Web API (https://api.sla
 =head1 Options
 
 You can set some options by giving C<opt> parameter to C<new> method.
-Almost values of C<opt> are gived to C<Furl#new>.
+All values of C<opt> are given to C<Furl#new>.
 
     WebService::Slack::WebApi->new(token => 'access token', opt => {});
 

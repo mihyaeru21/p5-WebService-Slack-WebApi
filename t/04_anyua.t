@@ -24,4 +24,11 @@ subtest 'illegal parameters opt and ua' => sub {
     done_testing;
 };
 
+subtest 'default ua is Furl' => sub {
+    my $conclete_ua = WebService::Slack::WebApi->new->client->ua->ua;
+    isa_ok $conclete_ua, 'Furl';
+
+    done_testing;
+};
+
 done_testing;

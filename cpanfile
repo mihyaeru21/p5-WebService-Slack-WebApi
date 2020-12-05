@@ -14,7 +14,6 @@ recommends 'Furl';
 on 'test' => sub {
     requires 'Test::More';
     requires 'Test::Exception';
-    requires 'Test::Mock::Furl';
     requires 'Devel::Cover::Report::Coveralls';
     requires 'Furl';
 };

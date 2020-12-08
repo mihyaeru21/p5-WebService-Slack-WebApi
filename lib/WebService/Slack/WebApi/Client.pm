@@ -4,7 +4,7 @@ use warnings;
 use utf8;
 
 use HTTP::AnyUA;
-use JSON::XS;
+use JSON;
 use WebService::Slack::WebApi::Exception;
 
 use Class::Accessor::Lite::Lazy (

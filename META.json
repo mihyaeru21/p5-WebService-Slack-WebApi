@@ -41,24 +41,27 @@
          }
       },
       "runtime" : {
+         "recommends" : {
+            "Furl" : "0",
+            "JSON::XS" : "0"
+         },
          "requires" : {
             "Class::Accessor::Lite" : "0",
             "Class::Accessor::Lite::Lazy" : "0",
             "Class::Load" : "0",
             "Data::Validator" : "0",
             "Exception::Tiny" : "0",
-            "Furl" : "0",
-            "HTTP::Request::Common" : "0",
+            "HTTP::AnyUA" : "0",
             "IO::Socket::SSL" : "0",
-            "JSON::XS" : "0",
+            "JSON" : "0",
             "perl" : "5.010"
          }
       },
       "test" : {
          "requires" : {
             "Devel::Cover::Report::Coveralls" : "0",
+            "Furl" : "0",
             "Test::Exception" : "0",
-            "Test::Mock::Furl" : "0",
             "Test::More" : "0"
          }
       }
@@ -80,7 +83,7 @@
       "Askar Timirgazin <anotheroneackap@gmail.com>",
       "Ivan Wills <Ivan.Wills2@optus.com.au>",
       "Matt Hallacy <mhallacy+github@haproxy.com>",
-      "Mikko Koivunalho <mikko.koivunalho@iki.fi>",
+      "Mikko Johannes Koivunalho <mikko.koivunalho@iki.fi>",
       "Sterling Hanenkamp <sterling@hanenkamp.com>",
       "Sterling Hanenkamp <sterling@ziprecruiter.com>",
       "Steven Arnott <steven.arnott@grantstreet.com>",

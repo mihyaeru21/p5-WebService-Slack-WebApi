@@ -4,7 +4,7 @@ use warnings;
 use utf8;
 use feature qw/state/;
 
-use JSON::XS;
+use JSON;
 use Exporter qw/ import /;
 
 use WebService::Slack::WebApi;

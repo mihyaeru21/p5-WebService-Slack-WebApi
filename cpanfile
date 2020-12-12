@@ -7,9 +7,10 @@ requires 'Data::Validator';
 requires 'Exception::Tiny';
 requires 'HTTP::AnyUA';
 requires 'IO::Socket::SSL';
-requires 'JSON::XS';
+requires 'JSON';
 
 recommends 'Furl';
+recommends 'JSON::XS';
 
 on 'test' => sub {
     requires 'Test::More';

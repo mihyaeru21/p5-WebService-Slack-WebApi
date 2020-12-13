@@ -34,13 +34,7 @@ jobs:
       - name: Run tests
         env:
           HARNESS_PERL_SWITCHES: '-MDevel::Cover=+ignore,^local/|^t/'
-        run: |
-          carton exec -- prove -lrv t
-      - name: Coveralls
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          COVERALLS_FLAG_NAME: perl-${{ matrix.perl }}
-        run: |
-          echo $COVERALLS_FLAG_NAME
-          carton exec -- cover -report coveralls
-
+        run: carton exec -- prove -lrv t
+      - uses: mihyaeru21/actions-report-coveralls-perl@coveralls
+        with:
+          flag-name: perl-${{ matrix.perl }}

@@ -31,7 +31,7 @@ jobs:
           path: ./local
           key: ${{ runner.os }}-perl-${{ matrix.perl }}-${{ hashFiles('./cpanfile.snapshot') }}
       - name: Coveralls
-        uses: mihyaeru21/actions-report-coveralls-perl@main
+        uses: mihyaeru21/actions-report-coveralls-perl@v1
         with:
           flag-name: perl-${{ matrix.perl }}
       - run: carton install

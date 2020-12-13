@@ -36,6 +36,6 @@ jobs:
           HARNESS_PERL_SWITCHES: '-MDevel::Cover=+ignore,^local/|^t/'
         run: carton exec -- prove -lrv t
       - name: Coveralls
-        uses: mihyaeru21/actions-report-coveralls-perl@master
+        uses: mihyaeru21/actions-report-coveralls-perl@main
         with:
           flag-name: perl-${{ matrix.perl }}

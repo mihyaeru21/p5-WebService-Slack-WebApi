@@ -527,6 +527,12 @@ my %tests = (
         },
     },
     users => {
+        conversations => {
+            cursor           => 'dXNlcjpVMDYxTkZUVDI=',
+            exclude_archived => 1,
+            exclude_members  => 1,
+            limit            => 20,
+        },
         delete_photo => +{},
         get_presence => {
             user => 'hoge',

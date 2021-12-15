@@ -48,6 +48,10 @@ use WebService::Slack::WebApi::Generator (
         limit            => { isa => 'Int',  optional => 1 },
         types            => { isa => 'Str',  optional => 1 }, 
     },
+    mark => {
+        channel => 'Str',
+        ts      => 'Str',
+    },
     members => {
         channel => 'Str',
         cursor  => { isa => 'Str',  optional => 1 },

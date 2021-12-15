@@ -122,6 +122,10 @@ my %tests = (
             limit            => 20,
             types            => 'public_channel,private_channel'
         },
+        mark => {
+            channel => 'hoge',
+            ts      => '1234567890.123456',
+        },
         members => {
             channel => 'hoge',
             cursor  => 'dXNlcjpVMDYxTkZUVDI=',

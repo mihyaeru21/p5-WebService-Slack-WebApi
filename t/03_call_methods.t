@@ -36,7 +36,7 @@ my %tests = (
         },
         invite => {
             channel => 'hoge',
-            user    => 'hoge',
+            user   => 'hoge',
         },
         join => {
             name     => 'hoge',
@@ -104,7 +104,7 @@ my %tests = (
         },
         invite => {
             channel => 'hoge',
-            user    => 'hoge',
+            users   => 'hoge',
         },
         join => {
             channel => 'hoge',
@@ -279,7 +279,7 @@ my %tests = (
         },
         invite => {
             channel => 'hoge',
-            user    => 'fuga',
+            users   => 'fuga',
         },
         kick => {
             channel => 'hoge',

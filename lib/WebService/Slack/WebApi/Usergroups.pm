@@ -14,7 +14,7 @@ use Class::Accessor::Lite::Lazy (
 use WebService::Slack::WebApi::Generator (
     create => {
         name => 'Str',
-        channels => { isa => 'ArrayRef', optional => 1 },
+        channels => { isa => 'Str', optional => 1 },
         description   => { isa => 'Str',  optional => 1 },
         handle   => { isa => 'Str',  optional => 1 },
         include_count => { isa => 'Bool', optional => 1 },

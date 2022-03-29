@@ -13,6 +13,9 @@ use WebService::Slack::WebApi::Generator (
         name => 'Str',
         validate => { isa => 'Bool', optional => 1 },
     },
+    delete => {
+        channel => 'Str',
+    },
     history => {
         channel   => 'Str',
         count     => { isa => 'Int',  optional => 1 },

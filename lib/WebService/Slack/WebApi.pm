@@ -7,7 +7,7 @@ use Class::Load qw/ load_class /;
 use Class::Accessor::Lite::Lazy (
     new     => 1,
     rw      => [qw/ team_domain token opt ua /],
-    ro_lazy => [qw/ client api auth channels conversations chat dialog emoji files groups im oauth pins reactions rtm search stars team users dnd bots migration /],
+    ro_lazy => [qw/ client api auth channels conversations chat dialog emoji files groups im oauth pins reactions rtm search stars team users dnd bots migration usergroups /],
 );
 
 use WebService::Slack::WebApi::Exception;
@@ -30,7 +30,7 @@ sub _build_client {
     );
 }
 
-for my $class_name (qw/ api auth channels conversations chat dialog emoji files groups im oauth pins reactions rtm search stars team users dnd bots migration /) {
+for my $class_name (qw/ api auth channels conversations chat dialog emoji files groups im oauth pins reactions rtm search stars team users dnd bots migration usergroups /) {
     my $method = sprintf '%s::_build_%s', __PACKAGE__, $class_name;
     my $class  = sprintf '%s::%s', __PACKAGE__, ucfirst($class_name);
 

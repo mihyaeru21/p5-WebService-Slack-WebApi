@@ -52,7 +52,6 @@
             "Data::Validator" : "0",
             "Exception::Tiny" : "0",
             "HTTP::AnyUA" : "0",
-            "IO::Socket::SSL" : "0",
             "JSON" : "0",
             "perl" : "5.010"
          }

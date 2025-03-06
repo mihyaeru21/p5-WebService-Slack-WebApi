@@ -2,6 +2,11 @@ Revision history for Perl extension WebService-Slack-WebApi
 
 {{$NEXT}}
 
+0.19 2025-03-06T18:42:59Z
+    - add support for the new file upload methodology (thx jamesp)
+    - add support for talking json to slack
+    - add chat.scheduleMessage and chat.deleteScheduledMessage
+
 0.18 2021-02-06T13:56:26Z
     - add oauth.v2.access method (thx mikkoi)
     - pass token by HTTP header instead of POST body (thx mikkoi)

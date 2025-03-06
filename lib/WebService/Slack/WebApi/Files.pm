@@ -7,6 +7,14 @@ use Data::Dumper qw/Dumper/;
 
 use parent 'WebService::Slack::WebApi::Base';
 
+=head1 NAME
+
+WebService::Slack::WebApi::Files
+
+=over 4
+
+=cut
+
 use WebService::Slack::WebApi::Generator (
     delete => {
         file => 'Str',
@@ -291,6 +299,10 @@ sub upload_v2 {
     
     return ($code, $external_url_response);
 }
+
+=back
+
+=cut
 
 1;
 

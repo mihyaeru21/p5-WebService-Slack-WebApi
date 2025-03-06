@@ -2,3 +2,5 @@ name = "WebService-Slack-WebApi"
 badges = ["github-actions", "coveralls"]
 module_maker="ModuleBuildTiny"
 license="mit"
+[release]
+do_not_upload_to_cpan=true

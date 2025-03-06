@@ -208,7 +208,7 @@ sub _check_response
 # Returns an array with $code and $response.
 #   $code = 0, 1 or 2 to indicate if it succeeded or 'channel_not_found' handler was called.
 #   $response = last response message returned in the process
-sub uploadV2 {
+sub upload_v2 {
     my $self          = shift;
     my $args          = { error_handler => \&_check_response, @_ };
     my $channel       = $args->{channel};    # slack channel name
@@ -229,17 +229,17 @@ sub uploadV2 {
     my $code; # tracks the error_handler result.
     
     if (!defined $error_handler) {
-        die "uploadV2(): error_handler must be defined!";
+        die "upload_v2(): error_handler must be defined!";
     }
     if (defined $error_handler && ref($error_handler) ne 'CODE') {
-        die "uploadV2(): error_handler is not a CODE ref!  You provided: " . ref($error_handler);
+        die "upload_v2(): error_handler is not a CODE ref!  You provided: " . ref($error_handler);
     }
     
     if (!defined $channel_not_found) {
-        die "uploadV2(): channel_not_found must be defined!";
+        die "upload_v2(): channel_not_found must be defined!";
     }
     if (defined $channel_not_found && ref($channel_not_found) ne 'CODE') {
-        die "uploadV2(): channel_not_found is not a CODE ref!  You provided: " . ref($channel_not_found);
+        die "upload_v2(): channel_not_found is not a CODE ref!  You provided: " . ref($channel_not_found);
     }
 
     my $external_url_response = $self->get_upload_url_external(

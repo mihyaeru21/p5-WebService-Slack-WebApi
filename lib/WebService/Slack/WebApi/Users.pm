@@ -12,6 +12,15 @@ use Class::Accessor::Lite::Lazy (
 );
 
 use WebService::Slack::WebApi::Generator (
+    conversations => {
+        cursor           => { isa => 'Str',  optional => 1 },
+        exclude_archived => { isa => 'Bool', optional => 1 },
+        limit            => { isa => 'Int',  optional => 1 },
+        presence         => { isa => 'Bool', optional => 1 },
+        team_id          => { isa => 'Str',  optional => 1 },
+        types            => { isa => 'Str',  optional => 1 },
+        user             => { isa => 'Str',  optional => 1 },
+    },
     delete_photo => +{},
     get_presence => {
         user => 'Str',

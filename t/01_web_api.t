@@ -45,6 +45,7 @@ subtest 'types' => sub {
         dnd           => 'WebService::Slack::WebApi::Dnd',
         bots          => 'WebService::Slack::WebApi::Bots',
         migration     => 'WebService::Slack::WebApi::Migration',
+        usergroups    => 'WebService::Slack::WebApi::Usergroups',
     );
     my $obj = WebService::Slack::WebApi->new(token => 'hoge');
     while (my ($method, $type) = each %methods) {
@@ -53,6 +54,7 @@ subtest 'types' => sub {
 
     isa_ok $obj->users->profile, 'WebService::Slack::WebApi::Users::Profile';
     isa_ok $obj->oauth->v2, 'WebService::Slack::WebApi::Oauth::V2';
+    isa_ok $obj->usergroups->users, 'WebService::Slack::WebApi::Usergroups::Users';
 };
 
 subtest 'opts' => sub {

@@ -14,19 +14,17 @@ jobs:
       fail-fast: false
       matrix:
         perl:
-          - '5.10'
-          - '5.28'
-          - '5.30'
-          - '5.32'
+          - '5.12'
+          - '5.40'
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Setup perl
         uses: shogo82148/actions-setup-perl@v1
         with:
           perl-version: ${{ matrix.perl }}
       - run: perl -V
       - name: Cache local files
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ./local
           key: ${{ runner.os }}-perl-${{ matrix.perl }}-${{ hashFiles('./cpanfile.snapshot') }}

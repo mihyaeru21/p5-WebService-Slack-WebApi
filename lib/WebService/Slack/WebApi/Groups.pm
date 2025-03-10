@@ -32,7 +32,7 @@ use WebService::Slack::WebApi::Generator (
     },
     invite => {
         channel => 'Str',
-        user    => 'Str',
+        users   => 'Str',
     },
     kick => {
         channel => 'Str',

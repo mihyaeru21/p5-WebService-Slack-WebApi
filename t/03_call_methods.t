@@ -122,6 +122,10 @@ my %tests = (
             limit            => 20,
             types            => 'public_channel,private_channel'
         },
+        mark => {
+            channel => 'hoge',
+            ts      => '1234567890.123456',
+        },
         members => {
             channel => 'hoge',
             cursor  => 'dXNlcjpVMDYxTkZUVDI=',
@@ -527,6 +531,12 @@ my %tests = (
         },
     },
     users => {
+        conversations => {
+            cursor           => 'dXNlcjpVMDYxTkZUVDI=',
+            exclude_archived => 1,
+            exclude_members  => 1,
+            limit            => 20,
+        },
         delete_photo => +{},
         get_presence => {
             user => 'hoge',

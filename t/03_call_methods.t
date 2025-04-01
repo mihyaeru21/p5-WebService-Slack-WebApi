@@ -579,6 +579,41 @@ my %tests = (
             to_old => '1',
         },
     },
+    usergroups => {
+        create => {
+            name          => 'G1234567890',
+            channels      => 'C1234567890,C1234567891',
+            description   => 'test',
+            handle        => 'handlename',
+            include_count => 1,
+            team_id       => 'T1234567890',
+        },
+        disable => {
+            usergroup     => 'test',
+            include_count => 1,
+            team_id       => 'T1234567890',
+        },
+        enable => {
+            usergroup     => 'test',
+            include_count => 1,
+            team_id       => 'T1234567890',
+        },
+        list => {
+            include_count    => 1,
+            include_disabled => 1,
+            include_users    => 1,
+            team_id          => 'T1234567890',
+        },
+        update => {
+            channels      => 'C1234567890',
+            description   => 'Testing',
+            handle        => 'handlename',
+            include_count => 1,
+            name          => 'groupname',
+            team_id       => 'T1234567890',
+        },
+    },
+
 );
 
 my $slack = any_mocked_slack();
@@ -605,6 +640,24 @@ subtest 'users.profile' => sub {
         },
         user    => 'hoge',
         value   => 'fuga',
+    ), 'HASH';
+};
+
+subtest 'usergroups.users' => sub {
+    isa_ok $slack->usergroups->users->list(
+       usergroup => 'G1234567890',
+       include_disabled => 1,
+       team_id => 'T1234567890',
+    ), 'HASH';
+
+    isa_ok $slack->usergroups->users->update(
+       usergroup     => 'G1234567890',
+       channels      => 'C1234567890,C1234567891',
+       description   => 'testgroup',
+       handle        => 'testhandle',
+       include_count => 1,
+       name          => 'testgroup',
+       team_id       => 'T1234567890',
     ), 'HASH';
 };
 
